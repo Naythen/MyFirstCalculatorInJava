@@ -3,6 +3,7 @@ package calculator;
 import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.Font;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -35,7 +36,7 @@ public class MyFirstCalculatorInJava {
 	private static char operator;
 	
 	
-	public static void main(String[] args) {
+public static void main(String[] args) {
 		
 		
 		// Creating the functions for every button pressed
@@ -208,11 +209,13 @@ public class MyFirstCalculatorInJava {
 		}
 		// Creating the GUI
 		gui = new JFrame("Calculator");
-		
 		gui.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		gui.setLayout(null);
 		gui.getContentPane().setBackground(Color.black);
 		gui.setSize(345, 394);
+		
+		//Creating the font
+		Font font1 = new Font("SansSerif",Font.BOLD,20);
 		
 		// Creating the text zone
 		zonatext = new JTextField();
@@ -225,74 +228,92 @@ public class MyFirstCalculatorInJava {
 		egal = new JButton("=");
 		egal.setBackground(Color.gray);
 		egal.setBounds(245, 300, 80-1, 49);
+		egal.setFont(font1);
 		
 		punct = new JButton(".");
 		punct.setBackground(Color.gray);
 		punct.setBounds(165, 300, 80-1, 49);
+		punct.setFont(font1);
 		
 		buton0 = new JButton("0");
 		buton0.setBackground(Color.gray);
 		buton0.setBounds(85, 300, 80-1, 49);
+		buton0.setFont(font1);
 		
 		schimbasemn = new JButton("+/-");
 		schimbasemn.setBackground(Color.gray);
 		schimbasemn.setBounds(5, 300, 80-1, 49);
+		schimbasemn.setFont(font1);
 		
 		buton1 = new JButton("1");
 		buton1.setBackground(Color.gray);
 		buton1.setBounds(5, 250, 80-1, 49);
+		buton1.setFont(font1);
 		
 		buton2 = new JButton("2");
 		buton2.setBackground(Color.gray);
 		buton2.setBounds(85, 250, 80-1, 49);
+		buton2.setFont(font1);
 		
 		buton3 = new JButton("3");
 		buton3.setBackground(Color.gray);
 		buton3.setBounds(165, 250, 80-1, 49);
+		buton3.setFont(font1);
 		
 		plus = new JButton("+");
 		plus.setBackground(Color.gray);
 		plus.setBounds(245, 250, 80-1, 49);
+		plus.setFont(font1);
 		
 		buton4 = new JButton("4");
 		buton4.setBackground(Color.gray);
 		buton4.setBounds(5, 200, 80-1, 49);
+		buton4.setFont(font1);
 		
 		buton5 = new JButton("5");
 		buton5.setBackground(Color.gray);
 		buton5.setBounds(85, 200, 80-1, 49);
+		buton5.setFont(font1);
 		
 		buton6 = new JButton("6");
 		buton6.setBackground(Color.gray);
 		buton6.setBounds(165, 200, 80-1, 49);
+		buton6.setFont(font1);
 		
 		minus = new JButton("-");
 		minus.setBackground(Color.gray);
 		minus.setBounds(245, 200, 80-1, 49);
+		minus.setFont(font1);
 		
 		buton7 = new JButton("7");
 		buton7.setBackground(Color.gray);
 		buton7.setBounds(5, 150, 80-1, 49);
+		buton7.setFont(font1);
 		
 		buton8 = new JButton("8");
 		buton8.setBackground(Color.gray);
 		buton8.setBounds(85, 150, 80-1, 49);
+		buton8.setFont(font1);
 		
 		buton9 = new JButton("9");
 		buton9.setBackground(Color.gray);
 		buton9.setBounds(165, 150, 80-1, 49);
+		buton9.setFont(font1);
 		
 		mlt = new JButton("X");
 		mlt.setBackground(Color.gray);
 		mlt.setBounds(245, 150, 80-1, 49);
+		mlt.setFont(font1);
 		
 		div = new JButton("/");
 		div.setBackground(Color.gray);
 		div.setBounds(245, 100, 80-1, 49);
+		div.setFont(font1);
 		
 		clear = new JButton("C");
 		clear.setBackground(Color.gray);
 		clear.setBounds(5, 100, 240-1, 49);
+		clear.setFont(font1);
 		
 		
 		// Adding the listener to our buttons
@@ -343,8 +364,11 @@ public class MyFirstCalculatorInJava {
 		gui.add(div);
 		gui.add(clear);
 		
+		
+		
+		zonatext.setFont(font1);
+		zonatext.setHorizontalAlignment((int) JFrame.CENTER_ALIGNMENT);
 		gui.setVisible(true);
 		gui.setResizable(false);
 	}
-
 }
